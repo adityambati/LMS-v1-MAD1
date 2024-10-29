@@ -1,7 +1,7 @@
 # Library Management System - V1 (LMS-v1-MAD1)
 The project, Library Management System Version 1, made for the course Modern Application Development 1, which is part of the IIT-Madras BS Degree in Data Science
 
-![Library Management System Banner](link-to-your-banner-image)
+<img src="/images/banner.png" alt="Banner" width="600">
 
 A foundational library management system for managing e-books, sections, and user activities in an organized and efficient way.
 
@@ -46,13 +46,17 @@ flask run
 ## Screenshots
 
 ### Login Page
-![Login](link-to-login-screenshot)
+<img src="/images/UserLogin.png" alt="User Login" width="600">
+
+### User Dashboard
+<img src="/images/UserBooks.png" alt="User Dashboard 1" width="600">
+<img src="/images/UserDashAllBooks.png" alt="User Dashboard 2" width="600">
 
 ### Admin Dashboard
-![Dashboard](link-to-dashboard-screenshot)
+<img src="/images/AdminDash2.png" alt="Admin Dashboard 1" width="600">
 
 ### Book Management Interface
-![Manage Books](link-to-book-management-screenshot)
+<img src="/images/AdminDash1.png" alt="Admin Dashboard 2" width="600">
 
 ## Technologies Used
 - **Flask**: Backend framework for creating APIs and handling application logic.
@@ -65,6 +69,13 @@ flask run
 ├── app.py             # Main application file
 ├── templates/         # HTML templates for pages
 ├── static/            # Static files (CSS, JS, images)
-├── models.py          # Database models
-├── routes.py          # Application routes
 └── README.md          # Project documentation
+```
+
+## Future Scope
+- **Advanced Dashboard Features** - Adding caching and batch job capabilities.
+- **Enhanced User Notifications** - Automated email reminders and reporting.
+- **Improved UI** - A better user interface, as currently its basic.
+
+## LICENSE
+This project is licensed under the MIT License. See <a href="https://github.com/adityambati/LMS-v1-MAD1/blob/main/LICENSE">LICENSE<a/> for details.
