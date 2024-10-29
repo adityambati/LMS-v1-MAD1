@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Search Results</title>
+  </head>
+<body>
+    <div id="dashboard">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="/admin"><bold>User Dashboard</bold></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/user/{{u_id}}">My Books</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/user_dash_allbooks/{{u_id}}">All Books</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Logout</a>
+                    </li>
+                    </ul>
+                    <form class="d-flex">
+                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                  </div>
+                </div>
+              </nav>
+              <h3>Book and Author search</h3>
+              {% if search_results_book|length == 0 %}
+                <h4> No books found with the name or author</h4>
+              {% else %}
+              <div id="trans-table2">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Book Number</th>
+                    <th scope="col">Book Title</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Section</th>
+                    <th scope="col">Date Published</th>
+                    <th scope="col">Request Book</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for book in search_results_book %}
+                  <tr>
+                    <td>{{book.id}}</td>
+                    <td>{{book.book_name}}</td>
+                    <td>{{book.author}}</td>
+                    <td>{{book.section.section_name}}</td>
+                    <td>{{book.published_date}}</td>
+                    {% if book.status == 'in store' %}
+                        <td><a href="/req_book/{{u_id}}/{{book.id}}"><button type="button" class="btn btn-success">Request</button></a></td>
+                    {% else %}
+                        <td>Not available</td>
+                    {% endif %}
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+            {% endif %}
+            <h3>Section Search</h3>
+            {% if search_results_section|length == 0 %}
+                <h4> No sections were found with the name</h4>
+            {% else %}
+            <div id="trans-table2">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Section ID</th>
+                      <th scope="col">Section Name</th>
+                      <th scope="col">Publishing Date</th>
+                      <th scope="col">Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for sec in search_results_section %}
+                    <tr>
+                      <td>{{sec.section_id}}</td>
+                      <td>{{sec.section_name}}</td>
+                      <td>{{sec.pub_date}}</td>
+                      <td>{{sec.description}}</td>
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+              {% endif %}
+         </div>
+</body>
+</html>

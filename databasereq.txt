@@ -1,0 +1,33 @@
+user - general
+
+id
+username
+password
+
+
+Books
+
+book_id
+book_name
+author
+section
+content
+
+
+Sections
+
+section_id
+section_name
+date
+description
+
+User Books
+
+book_id
+book_name
+author
+section
+content
+issue_date
+return_date
+status

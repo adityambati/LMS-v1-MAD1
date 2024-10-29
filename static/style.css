@@ -1,0 +1,47 @@
+*{
+    margin: 0px;
+}
+#main, #canvas{
+    border: 2px solid black;
+    margin: auto;
+}
+#canvas{
+    width: 80%;
+    margin: auto;
+    height: 700px;
+    margin-top: 100px;
+}
+#main_form{
+    border: 2px solid black;
+    width: 600px;
+    height: auto;
+    margin: auto;
+    margin-top: 200px;
+    padding: 5px;
+    text-align: center;
+    font-family: fantasy;
+} 
+#text_box{
+    text-align: left;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#tables{
+    text-align: center;
+}
+#dashboard{
+    border: 2px solid black;
+    margin: auto;
+    width: 80%;
+    height: 700px;
+    margin-top: 100px;
+    padding: 10px;
+    padding-bottom: 0px auto;
+}
+#trans-table{
+    height: 500px;
+    overflow:scroll;
+}
+#trans-table2{
+    height:250px;
+    overflow:scroll;
+}

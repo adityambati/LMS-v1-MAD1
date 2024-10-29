@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>User Login form</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <div><ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">User Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/admin_login">Librarian/Admin Login</a>
+        </li>
+    </ul>
+    </div>
+    <div id="canvas">
+        <div id="main_form">
+            <h1>User Login</h1>
+            <form action="/" method="post">
+            <div class="mb-3"><div id="text_box">
+                <label for="username" class="form-label">User name</label>
+                <input type="text" class="form-control" id="username" placeholder="Name" name="username">
+            </div></div>
+            <div class="mb-3"><div id="text_box">
+                <label for="pwd" class="form-label">Password</label>
+                <input type="password" class="form-control" id="pwd" name="pwd">
+            </div></div>
+            <div><input type="submit" class="btn btn-primary" value="Login"></div>
+            </form>
+            <div><a href="/register"><button type="button" class="btn btn-outline-primary">Register</button></a>
+            </div>    
+        </div>
+    </div>
+</body>
+</html>
