@@ -32,12 +32,9 @@ cd LMS-v1-MAD1
 pip install -r requirements.txt
 
 # Run the application
-flask run
+python app.py
 ```
 ## Usage
-
-### Admin Login
-- **Credentials**: Use the admin credentials created during setup to access the librarian dashboard.
 
 ### User Interaction
 1. **Login as a User** – Access e-books and request functionality.
